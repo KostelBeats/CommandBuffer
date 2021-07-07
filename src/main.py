@@ -3,10 +3,10 @@ import pyperclip
 import time
 
 
-commands = open('../saves/commands.txt')
-intervals = open('../saves/intervals.txt')
-players = open('../saves/players.txt')
-coordinates = open('../saves/coordinates.txt')
+commands = open('saves/commands.txt')
+intervals = open('saves/intervals.txt')
+players = open('saves/players.txt')
+coordinates = open('saves/coordinates.txt')
 
 
 # read file and assign it's contents to a dictionary
