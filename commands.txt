@@ -1,0 +1,9 @@
+home:ctrl + shift + h
+cave2:ctrl + c + 2
+cave3:ctrl + c + 3
+nether-portal:ctrl + n + o
+portal-in-nether:ctrl + n + i
+village1:ctrl + v + 1
+witch1:ctrl + w + 1
+to-me:ctrl + h
+to-player:ctrl + n

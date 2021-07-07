@@ -1,0 +1,4 @@
+check_sleep:0.1
+init_sleep:0.32
+paste_sleep:0.2
+enter_sleep:0

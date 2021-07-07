@@ -1,0 +1,7 @@
+home:-80 71 -346
+cave2:160 64 -319
+cave3:522 66 5
+nether-portal:289 11 -71
+portal-in-nether:26 47 6
+village1:-676 68 -348
+witch1:-892 65 -1278
