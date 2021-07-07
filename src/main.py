@@ -19,7 +19,6 @@ def read_file(file, mode):
             output[keys] = float(values)
         elif mode == 'string':
             output[keys] = values
-            print(values)
     return output
 
 
