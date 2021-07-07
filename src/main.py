@@ -52,11 +52,12 @@ def key_routine(times):
 check_interval = intervals_list['check_sleep']
 username = players_list['your_nickname']
 
+
 # successful launch
 print(f"Ready to work. Delay is {check_interval} seconds.")
 print(hotkeys_list)
-save_file(commands, hotkeys_list)
-exit(0)
+
+
 # main loop
 while True:
     for opt, key in hotkeys_list.items():
