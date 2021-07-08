@@ -4,9 +4,9 @@ import time
 
 
 commands = 'saves/commands.txt'
-intervals = 'saves/intervals.txt'
 players = 'saves/players.txt'
 coordinates = 'saves/coordinates.txt'
+keys_delays = 'saves/keys.txt'
 
 
 # read file and assign it's contents to a dictionary
@@ -33,23 +33,20 @@ def save_file(path, data):
 
 # read files and map them to dictionaries
 hotkeys_list = read_file(commands, 'string')
-intervals_list = read_file(intervals, 'float')
+keys_list = read_file(keys_delays, 'float')
 players_list = read_file(players, 'string')
 coordinates_list = read_file(coordinates, 'string')
 
 
 # key pressing routine
-def key_routine(times):
-    keyboard.press_and_release('/')
-    time.sleep(times['init_sleep'])
-    keyboard.press_and_release('ctrl + v')
-    time.sleep(times['paste_sleep'])
-    keyboard.press_and_release('enter')
-    time.sleep(times['enter_sleep'])
+def key_routine(dictionary):
+    for key_name, delay in dictionary.items():
+        keyboard.press_and_release(key_name)
+        time.sleep(delay)
 
 
 # additional data
-check_interval = intervals_list['check_sleep']
+check_interval = 0.1
 username = players_list['your_nickname']
 
 
@@ -65,37 +62,37 @@ while True:
             if opt == 'home':
                 pyperclip.copy('tp ' + username + ' ' + coordinates_list[opt])
                 print('copied')
-                key_routine(intervals_list)
+                key_routine(keys_list)
             elif opt == 'cave2':
                 pyperclip.copy('tp ' + username + ' ' + coordinates_list[opt])
                 print('copied')
-                key_routine(intervals_list)
+                key_routine(keys_list)
             elif opt == 'cave3':
                 pyperclip.copy('tp ' + username + ' ' + coordinates_list[opt])
                 print('copied')
-                key_routine(intervals_list)
+                key_routine(keys_list)
             elif opt == 'nether-portal':
                 pyperclip.copy('tp ' + username + ' ' + coordinates_list[opt])
                 print('copied')
-                key_routine(intervals_list)
+                key_routine(keys_list)
             elif opt == 'portal-in-nether':
                 pyperclip.copy('tp ' + username + ' ' + coordinates_list[opt])
                 print('copied')
-                key_routine(intervals_list)
+                key_routine(keys_list)
             elif opt == 'village1':
                 pyperclip.copy('tp ' + username + ' ' + coordinates_list[opt])
                 print('copied')
-                key_routine(intervals_list)
+                key_routine(keys_list)
             elif opt == 'witch1':
                 pyperclip.copy('tp ' + username + ' ' + coordinates_list[opt])
                 print('copied')
-                key_routine(intervals_list)
+                key_routine(keys_list)
             elif opt == 'to-player':
                 pyperclip.copy('tp ' + username + ' ' + players_list['1'])
                 print('copied')
-                key_routine(intervals_list)
+                key_routine(keys_list)
             elif opt == 'to-me':
                 pyperclip.copy('tp ' + players_list['1'] + ' ' + username)
-                key_routine(intervals_list)
+                key_routine(keys_list)
 
     time.sleep(check_interval)
